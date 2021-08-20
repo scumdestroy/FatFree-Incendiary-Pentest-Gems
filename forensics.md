@@ -1,0 +1,6 @@
+strings [file]
+grep -a '[pattern]' [file]
+xdd [file]
+binwalk -Me [file]
+testdisk [file]
+photorec [file]
