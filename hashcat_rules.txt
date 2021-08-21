@@ -1,0 +1,155 @@
+#do nothing (:) (p@ssW0rd -> p@ssW0rd)
+#:
+
+#Lowercase all (l) (p@ssW0rd -> p@ssw0rd)
+#l
+
+#Uppercase all (u) (p@ssW0rd -> P@SSW0RD)
+#u
+
+#Capitalize the first letter and lower the rest (c) (p@ssW0rd -> P@ssw0rd)
+#c
+
+#Lowercase first found character, uppercase the rest (C) (p@ssW0rd -> p@SSW0RD)
+#C
+
+#Toggle the case of all characters in word (t) (p@ssW0rd -> P@SSw0RD)
+#t
+
+#Toggle the case of characters at position N (TN) (p@ssW0rd -> p@sSW0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=11))
+#T3
+
+#Reverse the entire word (r) (p@ssW0rd -> dr0Wss@p)
+#r
+
+#Duplicate entire word (d) (p@ssW0rd -> p@ssW0rdp@ssW0rd)
+#d
+
+#Append duplicated word N times (pN) (p@ssW0rd -> p@ssW0rdp@ssW0rdp@ssW0rd)
+#p2
+
+#Duplicate word reversed (f) (p@ssW0rd -> p@ssW0rddr0Wss@p)
+#f
+
+#Rotates the word left ({) (p@ssW0rd -> @ssW0rdp)
+#{
+
+#Rotates the word right (}) (p@ssW0rd -> dp@ssW0r)
+#}
+
+#Append character X to end ($X) (p@ssW0rd -> p@ssW0rd1)
+#$1
+
+#Prepend character X to front (^X) (p@ssW0rd -> 1p@ssW0rd)
+#^1
+
+#Deletes first character ([) (p@ssW0rd -> @ssW0rd)
+#[
+
+#Deletes last character (]) (p@ssW0rd -> p@assW0r)
+#]
+
+#Deletes character at position N (DN) (p@ssW0rd -> p@sW0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=11))
+#D3
+
+#Deletes M characters, starting at position N (xNM) (p@ssW0rd -> ssW0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=11))
+#x02
+
+#Inserts character X at position N (iNX) (p@ssW0rd -> p@ss!W0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=11))
+#i4!
+
+#Overwrites character at postion N with X (oNX) (p@ssW0rd -> p@s$W0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=11))
+#o3$
+
+#Truncate word at position N ('N) (p@ssW0rd -> p@ssW0)
+#'6
+
+#Replace all instances of X with Y (sXY) (p@ssW0rd -> p@$$W0rd)
+#ss$
+
+#Purge all instances of X (@X) (p@ssW0rd -> p@W0rd) (This rule is implemented in hashcat only)
+#@s
+
+#Duplicates first character N times (zN) (p@ssW0rd -> ppp@ssW0rd)
+#z2
+
+#Duplicates last character N times (ZN) (p@ssW0rd -> p@ssW0rddd)
+#Z2
+
+#Duplicate every character (q) (p@ssW0rd -> pp@@ssssWW00rrdd)
+#q
+
+#Insert substring of length M starting from position N of word saved to memory at position I (XNMI) (p@ssW0rd -> p@ssw0rdw0)
+#lMX428
+
+#Append the word saved to memory to current word (4) (p@ssW0rd -> p@ssw0rdP@SSW0RD)
+#uMl4
+
+#Prepend the word saved to memory to current word (6) (p@ssW0rd -> dr0Wss@pp@ssW0rd)
+#rMr6
+
+#Memorize current word (M) (p@ssW0rd -> P@SSp@ssw0rdW0RD)
+#lMuX084
+
+#Reject plains of length greater than N (<N) (MAX LENGTH)
+#<16
+
+#Reject plains of length less than N (>N) (MIN LENGTH)
+#>7
+
+#Reject plains which contain char X (!X) (MUST NOT CONTAIN)
+#!z
+
+#Reject plains which do not contain char X (/X) (MUST CONTAIN)
+#/e
+
+#Reject plains which do not start with X ((X) (MUST BEGIN WITH)
+#(h
+
+#Reject plains which do not end with X ()X) (MUST END WITH)
+#)t
+
+#Reject plains which do not have char X at position N (=NX) (MUST HAVE X AT)
+#=1a
+
+#Reject plains which contain char X less than N times (%NX) (MUST CONTAIN x2)
+#%2a
+
+#Reject plains where the memory saved matches current word (Q) (e.g. for palindrome)
+#rMrQ
+
+#Swaps first two characters (k) (p@ssW0rd -> @pssW0rd)
+#k
+
+#Swaps last two characters (K) (p@ssW0rd -> p@ssW0dr)
+#K
+
+#Swaps character X with Y (*XY) (p@ssW0rd -> p@sWs0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=10))
+#*34
+
+#Bitwise shift left character @ N (LN) (p@ssW0rd -> p@æsW0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=10))
+#L2
+
+#Bitwise shift right character @ N (RN) (p@ssW0rd -> p@9sW0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=10))
+#R2
+
+#Increment character @ N by 1 ascii value (+N) (p@ssW0rd -> p@tsW0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=10))
+#+2
+
+#Decrement character @ N by 1 ascii value (-N) (p@ssW0rd -> p?ssW0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=10))
+#-1
+
+#Replaces character @ N with value at @ N plus 1 (.N) (p@ssW0rd -> psssW0rd) (REPLACE WITH NEXT CHAR) (N starts at 0. For character positions other than 0-9 use A-Z (A=10))
+#.1
+
+#Replaces character @ N with value at @ N minus 1 (,N) (p@ssW0rd -> ppssW0rd) (REPLACE WITH PREV CHAR) (N starts at 0. For character positions other than 0-9 use A-Z (A=10))
+#,1
+
+#Duplicates first N characters (yN) (p@ssW0rd -> p@p@ssW0rd) (N starts at 0. For character positions other than 0-9 use A-Z (A=10))
+#y2
+
+#Duplicates last N characters (YN) (p@ssW0rd -> p@ssW0rdrd) (N starts at 0. For character positions other than 0-9 use A-Z (A=10))
+#Y2
+
+#Lower case the whole line, then upper case the first letter and every letter after a space (p@ssW0rd w0rld -> P@ssw0rd W0rld)
+#E
